@@ -143,8 +143,6 @@ connect = 0.0.0.0:$sshport
 cat << EOF > /root/banner.txt
 $banner
 EOF
-    sed -i 's/PrintMotd no/PrintMotd yes/' /etc/ssh/sshd_config
-    systemctl restart sshd
             ;;
             8)
             bash <(curl -Ls https://github.com/xpanel-cp/XPanel-SSH-User-Management/raw/master/block_iran.sh --ipv4)
